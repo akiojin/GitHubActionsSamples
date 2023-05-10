@@ -1,0 +1,14 @@
+name: Trigger main or release branch
+
+on:
+  push:
+    branches:
+      - main
+      - release/**
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "Pushed to the main or release branch."

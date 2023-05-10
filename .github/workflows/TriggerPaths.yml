@@ -1,0 +1,13 @@
+name: Trigger paths
+
+on:
+  push:
+    paths:
+      - Unity/**
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "A specific path has been pushed."

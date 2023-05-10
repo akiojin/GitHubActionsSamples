@@ -1,0 +1,13 @@
+name: Trigger pattern match
+
+on:
+  push:
+    branches:
+      - release/**
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "Pushed to the release branch."

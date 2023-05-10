@@ -1,0 +1,13 @@
+name: Trigger tags
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "Pushed to the tags."

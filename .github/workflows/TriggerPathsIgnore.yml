@@ -1,0 +1,13 @@
+name: Trigger paths ignore
+
+on:
+  push:
+    paths-ignore:
+      - .github/workflows/*.yml
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "A non-workflow push was made."

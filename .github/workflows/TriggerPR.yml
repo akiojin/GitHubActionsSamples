@@ -1,0 +1,13 @@
+name: Trigger PR
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "PR to the develop branch."

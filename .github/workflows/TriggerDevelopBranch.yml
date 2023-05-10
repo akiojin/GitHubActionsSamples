@@ -1,0 +1,13 @@
+name: Trigger develop branch
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "Pushed to the develop branch."
