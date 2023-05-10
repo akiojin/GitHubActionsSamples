@@ -31,4 +31,4 @@ jobs:
 
     steps:
       - run: |
-          echo "AppName: ${{ inputs.APP_NAME }} Build Number: ${{ inputs.BUILD_NUMBER}} Target: ${{ inputs.TARGET }}""
+          echo "AppName: ${{ inputs.APP_NAME }} Build Number: ${{ inputs.BUILD_NUMBER}} Target: ${{ inputs.TARGET }}"
