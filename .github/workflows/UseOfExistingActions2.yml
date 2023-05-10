@@ -1,0 +1,13 @@
+name: Equivalent to existing actions
+
+on: push
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: |
+          git clean -ffdex
+          git reset --hard HEAD
+          git checkout
