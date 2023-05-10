@@ -8,7 +8,7 @@ on:
 
 jobs:
   Example:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - run: echo "Pushed to the main or release branch."
