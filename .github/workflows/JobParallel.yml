@@ -1,0 +1,14 @@
+name: Job parallel
+
+on: push
+
+jobs:
+  JobA:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job A"
+  
+  JobB:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job B"

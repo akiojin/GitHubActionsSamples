@@ -1,0 +1,15 @@
+name: Job serial
+
+on: push
+
+jobs:
+  JobA:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job A"
+  
+  JobB:
+    runs-on: ubuntu-latest
+    needs: JobA
+    steps:
+      - run: echo "Job B"
