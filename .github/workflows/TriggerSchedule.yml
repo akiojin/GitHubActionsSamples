@@ -1,0 +1,12 @@
+name: Trigger Schedule
+
+on:
+  schedule:
+    - cron: 0 22 * * *
+
+jobs:
+  Example:
+    runs-on: macos-latest
+
+    steps:
+      - run: echo "Schedule events triggered."
