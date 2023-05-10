@@ -1,0 +1,33 @@
+name: Trigger workflow dispatch with multiple inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      APP_NAME:
+        description: アプリ名
+        required: true
+        type: string
+      BUILD_NUMBER:
+        description: ビルド番号
+        required: true
+        type: number
+      DEVELOPMENT_BUILD:
+        description: 開発ビルド
+        type: boolean
+      TARGET:
+        description: ターゲット
+        required: true
+        default: Sandbox
+        type: choice
+        options:
+          - Development
+          - Sandbox
+          - Production
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.DEVELOPMENT_BUILD }}
+
+    steps:
+      - run: echo "AppName: ${{ inputs.APP_NAME }} Build Number: ${{ inputs.BUILD_NUMBER}} Target: ${{ inputs.TARGET }}""

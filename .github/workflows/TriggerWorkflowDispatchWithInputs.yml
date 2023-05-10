@@ -1,0 +1,20 @@
+name: Trigger workflow dispatch with inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      CONFIGURATION:
+        description: 構成の選択
+        required: true
+        default: Debug
+        type: choice
+        options:
+          - Debug
+          - Release
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "${{ inputs.CONFIGURATION }}"
