@@ -3,7 +3,7 @@ name: Environment Variables Set or Update
 on: push
 
 jobs:
-  Example:
+  Example1:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,4 +15,11 @@ jobs:
       - name: Update environment variables
         run: echo "VARIABLE=Hello, World! (2)" >> $GITHUB_ENV
 
+      - run: echo "${{ env.VARIABLE }}"
+
+  Example2:
+    runs-on: ubuntu-latest
+    needs: Example1    
+
+    steps:
       - run: echo "${{ env.VARIABLE }}"

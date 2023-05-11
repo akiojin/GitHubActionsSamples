@@ -2,10 +2,15 @@ name: Environment Variables override
 
 on: push
 
+#env:
+#  PATH: ${{ env.PATH }} # This will cause an error
+
 jobs:
   Example1:
     runs-on: ubuntu-latest
-    
+#    env:
+#      PATH: ${{ env.PATH }} # This will cause an error
+        
     steps:
       - name: Echo environment variables 1
         run: |
