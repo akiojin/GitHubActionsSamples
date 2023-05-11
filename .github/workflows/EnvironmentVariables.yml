@@ -9,15 +9,15 @@ jobs:
     steps:
       - name: Echo environment variables 1
         run: |
-          echo "$PATH"
-          echo "${{ env.PATH }}"
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
 
       - name: Echo environment variables 2
         env:
           PATH: Hello, World!
         run: |
-          echo "$PATH"
-          echo "${{ env.PATH }}"
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
 
   Example2:
     runs-on: ubuntu-latest
@@ -27,12 +27,12 @@ jobs:
     steps:
       - name: Echo environment variables 1
         run: |
-          echo "$PATH"
-          echo "${{ env.PATH }}"
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
 
       - name: Echo environment variables 2
         env:
           PATH: Hello, World!
         run: |
-          echo "$PATH"
-          echo "${{ env.PATH }}"
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
