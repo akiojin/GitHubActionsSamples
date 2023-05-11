@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Class change
+      - name: Class change 1
         run: |
           echo "CLASS=Warrior" >> $GITHUB_ENV
           echo "My class is $CLASS"
@@ -18,7 +18,7 @@ jobs:
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
 
-      - name: Class change
+      - name: Class change 2
         run: |
           echo "CLASS=Wizard" >> $GITHUB_ENV
           echo "My class is $CLASS"
