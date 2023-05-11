@@ -1,4 +1,4 @@
-name: Environment Variables 2
+name: Environment Variables in workflow
 
 on: push
 

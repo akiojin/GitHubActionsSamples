@@ -1,4 +1,4 @@
-name: Environment Variables 1
+name: Environment Variables preset
 
 on: push
 
