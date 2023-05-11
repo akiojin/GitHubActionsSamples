@@ -3,34 +3,34 @@ name: Environment Variables
 on: push
 
 env:
-  ENV1: Test1
+  DRAGON: I am DRAGON
 
 jobs:
   Example1:
     runs-on: ubuntu-latest
     env:
-      ENV2: Test2
+      OGRE: I am OGRE
     
     steps:
       - name: Echo environment variables 1
         env:
-          ENV3: Test3
+          WITCH: I am WITCH
         run: |
-          echo "ENV1=$ENV1"
-          echo "ENV1=${{ env.ENV1 }}"
-          echo "ENV2=$ENV2"
-          echo "ENV2=${{ env.ENV2 }}"
-          echo "ENV3=$ENV3"
-          echo "ENV3=${{ env.ENV3 }}"
+          echo "DRAGON=$DRAGON"
+          echo "DRAGON=${{ env.DRAGON }}"
+          echo "OGRE=$OGRE"
+          echo "OGRE=${{ env.OGRE }}"
+          echo "WITCH=$WITCH"
+          echo "WITCH=${{ env.WITCH }}"
 
       - name: Echo environment variables 2
         run: |
-          echo "ENV1=$ENV1"
-          echo "ENV1=${{ env.ENV1 }}"
-          echo "ENV2=$ENV2"
-          echo "ENV2=${{ env.ENV2 }}"
-          echo "ENV3=$ENV3"
-          echo "ENV3=${{ env.ENV3 }}"
+          echo "DRAGON=$DRAGON"
+          echo "DRAGON=${{ env.DRAGON }}"
+          echo "OGRE=$OGRE"
+          echo "OGRE=${{ env.OGRE }}"
+          echo "WITCH=$WITCH"
+          echo "WITCH=${{ env.WITCH }}"
 
   Example2:
     runs-on: ubuntu-latest
@@ -38,9 +38,9 @@ jobs:
     steps:
       - name: Echo environment variables 3
         run: |
-          echo "ENV1=$ENV1"
-          echo "ENV1=${{ env.ENV1 }}"
-          echo "ENV2=$ENV2"
-          echo "ENV2=${{ env.ENV2 }}"
-          echo "ENV3=$ENV3"
-          echo "ENV3=${{ env.ENV3 }}"
+          echo "DRAGON=$DRAGON"
+          echo "DRAGON=${{ env.DRAGON }}"
+          echo "OGRE=$OGRE"
+          echo "OGRE=${{ env.OGRE }}"
+          echo "WITCH=$WITCH"
+          echo "WITCH=${{ env.WITCH }}"
