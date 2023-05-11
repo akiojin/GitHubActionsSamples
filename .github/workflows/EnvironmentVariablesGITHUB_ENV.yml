@@ -10,9 +10,9 @@ jobs:
       - name: Set environment variables
         run: echo "VARIABLE=Hello, World! (1)" >> $GITHUB_ENV
 
-      - run: echo ${{ env.VARIABLE }}
+      - run: echo "${{ env.VARIABLE }}"
 
       - name: Update environment variables
         run: echo "VARIABLE=Hello, World! (2)" >> $GITHUB_ENV
 
-      - run: echo ${{ env.VARIABLE }}
+      - run: echo "${{ env.VARIABLE }}"
