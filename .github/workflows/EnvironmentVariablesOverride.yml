@@ -2,24 +2,19 @@ name: Environment Variables override
 
 on: push
 
-#env:
-#  PATH: ${{ env.PATH }} # This will cause an error
-
 jobs:
   Example1:
     runs-on: ubuntu-latest
-#    env:
-#      PATH: ${{ env.PATH }} # This will cause an error
         
     steps:
-      - name: Echo environment variables 1
+      - name: No override 1
         run: |
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
 
-      - name: Echo environment variables 2
+      - name: Override 1
         env:
-          PATH: Hello, World!
+          PATH: override1
         run: |
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
@@ -27,17 +22,17 @@ jobs:
   Example2:
     runs-on: ubuntu-latest
     env:
-      PATH: Test1
+      PATH: override2
     
     steps:
-      - name: Echo environment variables 3
+      - name: No override 2
         run: |
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
 
-      - name: Echo environment variables 4
+      - name: Override 2
         env:
-          PATH: Hello, World!
+          PATH: override3
         run: |
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
