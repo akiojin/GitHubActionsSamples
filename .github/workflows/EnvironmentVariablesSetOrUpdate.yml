@@ -8,18 +8,30 @@ jobs:
 
     steps:
       - name: Set environment variables
-        run: echo "VARIABLE=Hello, World! (1)" >> $GITHUB_ENV
+        run: |
+          echo "VARIABLE=Hello, World! (1)" >> $GITHUB_ENV
+          echo "VARIABLE=$VARIABLE"
+          echo "VARIABLE=${{ env.VARIABLE }}"
 
-      - run: echo "${{ env.VARIABLE }}"
+      - run: |
+          echo "VARIABLE=$VARIABLE"
+          echo "VARIABLE=${{ env.VARIABLE }}"
 
       - name: Update environment variables
-        run: echo "VARIABLE=Hello, World! (2)" >> $GITHUB_ENV
+        run: |
+          echo "VARIABLE=Hello, World! (2)" >> $GITHUB_ENV
+          echo "VARIABLE=$VARIABLE"
+          echo "VARIABLE=${{ env.VARIABLE }}"
 
-      - run: echo "${{ env.VARIABLE }}"
+      - run: |
+          echo "VARIABLE=$VARIABLE"
+          echo "VARIABLE=${{ env.VARIABLE }}"
 
   Example2:
     runs-on: ubuntu-latest
     needs: Example1    
 
     steps:
-      - run: echo "${{ env.VARIABLE }}"
+      - run: |
+          echo "VARIABLE=$VARIABLE"
+          echo "VARIABLE=${{ env.VARIABLE }}"
