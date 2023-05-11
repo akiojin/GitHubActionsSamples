@@ -7,11 +7,6 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - name: No override 1
-        run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
-
       - name: Override 1
         env:
           PATH: override1
@@ -19,20 +14,26 @@ jobs:
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
 
-  Example2:
+      - name: No override 1
+        run: |
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
+  
+    Example2:
     runs-on: ubuntu-latest
     env:
       PATH: override2
     
     steps:
-      - name: No override 2
-        run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
-
       - name: Override 2
         env:
           PATH: override3
         run: |
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
+
+      - name: No override 2
+        run: |
+          echo "PATH=$PATH"
+          echo "PATH=${{ env.PATH }}"
+  

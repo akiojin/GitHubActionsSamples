@@ -1,4 +1,4 @@
-name: Environment Variables Set or Update
+name: Environment Variables set or update
 
 on: push
 
