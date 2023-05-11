@@ -13,7 +13,7 @@ jobs:
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
 
-      - name: What is your class? 1
+      - name: What's your class? 1
         run: |
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
@@ -24,7 +24,7 @@ jobs:
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
 
-      - name: What is your class? 2
+      - name: What's your class? 2
         run: |
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
@@ -34,7 +34,7 @@ jobs:
     needs: Example1    
 
     steps:
-      - name: What is your class? 3
+      - name: What's your class? 3
         run: |
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
