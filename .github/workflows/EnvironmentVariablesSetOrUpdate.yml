@@ -7,31 +7,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set environment variables
+      - name: Class change
         run: |
-          echo "VARIABLE=Hello, World! (1)" >> $GITHUB_ENV
-          echo "VARIABLE=$VARIABLE"
-          echo "VARIABLE=${{ env.VARIABLE }}"
+          echo "CLASS=Warrior" >> $GITHUB_ENV
+          echo "My class is $CLASS"
+          echo "My class is ${{ env.CLASS }}"
 
-      - run: |
-          echo "VARIABLE=$VARIABLE"
-          echo "VARIABLE=${{ env.VARIABLE }}"
-
-      - name: Update environment variables
+      - name: What is your class? 1
         run: |
-          echo "VARIABLE=Hello, World! (2)" >> $GITHUB_ENV
-          echo "VARIABLE=$VARIABLE"
-          echo "VARIABLE=${{ env.VARIABLE }}"
+          echo "My class is $CLASS"
+          echo "My class is ${{ env.CLASS }}"
 
-      - run: |
-          echo "VARIABLE=$VARIABLE"
-          echo "VARIABLE=${{ env.VARIABLE }}"
+      - name: Class change
+        run: |
+          echo "CLASS=Wizard" >> $GITHUB_ENV
+          echo "My class is $CLASS"
+          echo "My class is ${{ env.CLASS }}"
+
+      - name: What is your class? 2
+        run: |
+          echo "My class is $CLASS"
+          echo "My class is ${{ env.CLASS }}"
 
   Example2:
     runs-on: ubuntu-latest
     needs: Example1    
 
     steps:
-      - run: |
-          echo "VARIABLE=$VARIABLE"
-          echo "VARIABLE=${{ env.VARIABLE }}"
+      - name: What is your class? 3
+        run: |
+          echo "My class is $CLASS"
+          echo "My class is ${{ env.CLASS }}"

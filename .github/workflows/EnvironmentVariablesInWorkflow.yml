@@ -3,12 +3,12 @@ name: Environment Variables in workflow
 on: push
 
 env:
-  VARIABLE: Hello, World!
+  PROLOGUE: A chosen hero embarks on a quest to save a world on the brink of chaos.
 
 jobs:
   Example:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Echo environment variables
-        run: echo ${{ env.VARIABLE }}
+      - name: Show prologue
+        run: echo ${{ env.PROLOGUE }}

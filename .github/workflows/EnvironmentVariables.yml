@@ -12,7 +12,7 @@ jobs:
       OGRE: I'm Ogre
     
     steps:
-      - name: Who are you 1
+      - name: Who are you? 1
         env:
           WITCH: I'm Witch
         run: |
@@ -23,7 +23,7 @@ jobs:
           echo "WITCH=$WITCH"
           echo "WITCH=${{ env.WITCH }}"
 
-      - name: Who are you 2
+      - name: Who are you? 2
         run: |
           echo "DRAGON=$DRAGON"
           echo "DRAGON=${{ env.DRAGON }}"
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Who are you 3
+      - name: Who are you? 3
         run: |
           echo "DRAGON=$DRAGON"
           echo "DRAGON=${{ env.DRAGON }}"
