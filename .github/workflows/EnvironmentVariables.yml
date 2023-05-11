@@ -3,18 +3,18 @@ name: Environment Variables
 on: push
 
 env:
-  DRAGON: I am DRAGON
+  DRAGON: I'm Dragon
 
 jobs:
   Example1:
     runs-on: ubuntu-latest
     env:
-      OGRE: I am OGRE
+      OGRE: I'm Ogre
     
     steps:
-      - name: Echo environment variables 1
+      - name: Who are you 1
         env:
-          WITCH: I am WITCH
+          WITCH: I'm Witch
         run: |
           echo "DRAGON=$DRAGON"
           echo "DRAGON=${{ env.DRAGON }}"
@@ -23,7 +23,7 @@ jobs:
           echo "WITCH=$WITCH"
           echo "WITCH=${{ env.WITCH }}"
 
-      - name: Echo environment variables 2
+      - name: Who are you 2
         run: |
           echo "DRAGON=$DRAGON"
           echo "DRAGON=${{ env.DRAGON }}"
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Echo environment variables 3
+      - name: Who are you 3
         run: |
           echo "DRAGON=$DRAGON"
           echo "DRAGON=${{ env.DRAGON }}"
