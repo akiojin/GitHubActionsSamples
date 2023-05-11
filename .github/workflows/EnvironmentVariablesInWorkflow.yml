@@ -4,6 +4,7 @@ on: push
 
 env:
   VARIABLE: Hello, World!
+
 jobs:
   Example:
     runs-on: ubuntu-latest
