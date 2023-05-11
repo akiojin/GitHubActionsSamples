@@ -2,11 +2,12 @@ name: Environment Variables Set or Update
 
 on: push
 
+env:
+  CLASS: Thief
+
 jobs:
   Example1:
     runs-on: ubuntu-latest
-    env:
-      CLASS: "Hero"
 
     steps:
       - name: Class change 1
