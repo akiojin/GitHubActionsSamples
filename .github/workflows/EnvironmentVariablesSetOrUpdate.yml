@@ -1,4 +1,4 @@
-name: Environment Variables GITHUB_ENV
+name: Environment Variables Set or Update
 
 on: push
 

@@ -1,4 +1,4 @@
-name: Trigger PR
+name: Trigger pull_request
 
 on:
   pull_request:

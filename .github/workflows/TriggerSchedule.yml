@@ -1,4 +1,4 @@
-name: Trigger Schedule
+name: Trigger schedule
 
 on:
   schedule:
