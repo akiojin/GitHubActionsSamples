@@ -1,0 +1,23 @@
+name: Environment Variables
+
+on: push
+
+env:
+  PATH: Test1
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo environment variables 1
+        run: |
+          echo "$PATH"
+          echo "${{ env.PATH }}"
+
+      - name: Echo environment variables 2
+        env:
+          PATH: Hello, World!
+        run: |
+          echo "$PATH"
+          echo "${{ env.PATH }}"
