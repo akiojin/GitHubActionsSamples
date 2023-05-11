@@ -13,13 +13,11 @@ jobs:
       - name: Class change 1
         run: |
           echo "CLASS=Warrior" >> $GITHUB_ENV
-          echo "CI=false" >> $GITHUB_ENV
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
 
       - name: What's your class? 1
         run: |
-          echo "CI is $CI"
           echo "My class is $CLASS"
           echo "My class is ${{ env.CLASS }}"
 
