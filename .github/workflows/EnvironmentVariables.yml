@@ -2,37 +2,45 @@ name: Environment Variables
 
 on: push
 
+env:
+  ENV1: Test1
+
 jobs:
   Example1:
     runs-on: ubuntu-latest
+    env:
+      ENV2: Test2
     
     steps:
       - name: Echo environment variables 1
+        env:
+          ENV3: Test3
         run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
+          echo "ENV1=$ENV1"
+          echo "ENV1=${{ env.ENV1 }}"
+          echo "ENV2=$ENV2"
+          echo "ENV2=${{ env.ENV2 }}"
+          echo "ENV3=$ENV3"
+          echo "ENV3=${{ env.ENV3 }}"
 
       - name: Echo environment variables 2
-        env:
-          PATH: Hello, World!
         run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
+          echo "ENV1=$ENV1"
+          echo "ENV1=${{ env.ENV1 }}"
+          echo "ENV2=$ENV2"
+          echo "ENV2=${{ env.ENV2 }}"
+          echo "ENV3=$ENV3"
+          echo "ENV3=${{ env.ENV3 }}"
 
   Example2:
     runs-on: ubuntu-latest
-    env:
-      PATH: Test1
     
     steps:
-      - name: Echo environment variables 1
+      - name: Echo environment variables 3
         run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
-
-      - name: Echo environment variables 2
-        env:
-          PATH: Hello, World!
-        run: |
-          echo "PATH=$PATH"
-          echo "PATH=${{ env.PATH }}"
+          echo "ENV1=$ENV1"
+          echo "ENV1=${{ env.ENV1 }}"
+          echo "ENV2=$ENV2"
+          echo "ENV2=${{ env.ENV2 }}"
+          echo "ENV3=$ENV3"
+          echo "ENV3=${{ env.ENV3 }}"
