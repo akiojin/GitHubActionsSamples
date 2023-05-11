@@ -19,7 +19,7 @@ jobs:
           echo "PATH=$PATH"
           echo "PATH=${{ env.PATH }}"
   
-    Example2:
+  Example2:
     runs-on: ubuntu-latest
     env:
       PATH: override2
