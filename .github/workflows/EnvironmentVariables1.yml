@@ -1,0 +1,11 @@
+name: Environment Variables 1
+
+on: push
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo PATH
+        run: echo $PATH

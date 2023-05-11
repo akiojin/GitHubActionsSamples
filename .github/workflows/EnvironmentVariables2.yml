@@ -1,0 +1,13 @@
+name: Environment Variables 2
+
+on: push
+
+env:
+  VARIABLE: Hello, World!
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo environment variables
+        run: echo ${{ env.VARIABLE }}
