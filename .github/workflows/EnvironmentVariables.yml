@@ -12,7 +12,7 @@ jobs:
       OGRE: I'm Ogre
     
     steps:
-      - run: env
+      - run: env | sort
       - name: Who are you? 1
         env:
           WITCH: I'm Witch
