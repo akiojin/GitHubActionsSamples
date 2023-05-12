@@ -1,6 +1,8 @@
 name: Strategy & Matrix
 
-on: push
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   Example:
