@@ -1,0 +1,21 @@
+name: Strategy & Matrix
+
+on: push
+
+jobs:
+  Example:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        UNITY_VERSION:
+          - 2021.3.23f1
+          - 2021.3.24f1
+        BUILD_TARGET:
+          - iOS
+          - Android
+          - Win64
+          - OSXUniversal
+
+    steps:
+      - run: |
+          echo "Unity: ${{ matrix.UNITY_VERSION }}, Target: ${{ matrix.BUILD_TARGET }}"
