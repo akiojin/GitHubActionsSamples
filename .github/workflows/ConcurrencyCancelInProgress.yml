@@ -1,0 +1,16 @@
+name: Concurency cancel in progress
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "${{ github.event }}"

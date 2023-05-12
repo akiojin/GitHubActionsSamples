@@ -1,0 +1,17 @@
+name: Context env
+
+on: push
+
+env:
+  MONSTER: Dragon
+
+jobs:
+  Example:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Target is ${{ env.MONSTER }}"
+
+      - run: echo "Target is ${{ env.MONSTER }}"
+        env:
+          TARGET: OGRE
